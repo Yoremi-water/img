@@ -1,0 +1,33 @@
+G:\制度文件\制度文件导出001\制度文件导出
+G:\制度文件\制度文件导出001
+
+
+Get-ChildItem -Path "G:\制度文件\制度文件导出001\制度文件导出" -Recurse | ForEach-Object {
+    $newName = $_.Name -replace "附件1：", ""
+    Rename-Item -Path $_.FullName -NewName $newName
+}
+
+
+附件1：
+
+
+Get-ChildItem -Path "G:\制度文件\制度文件导出001" -Recurse | ForEach-Object {
+    $newName = $_.Name -replace "附件1", ""
+    Rename-Item -Path $_.FullName -NewName $newName
+}
+
+
+
+Get-ChildItem -Path "C:\Users\小白\Desktop\制度文件001\制度文件001" -Recurse | ForEach-Object {
+    $newName = $_.Name -replace "附件1：", ""
+    Rename-Item -Path $_.FullName -NewName $newName
+}
+
+C:\Users\小白\Desktop\制度文件001\制度文件001
+附件1：
+
+C:\Users\小白\Desktop\制度文件002\制度文件002
+
+C:\Users\小白\Desktop\制度文件002\制度文件002
+
+附件1：
